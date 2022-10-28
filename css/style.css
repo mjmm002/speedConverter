@@ -1,0 +1,27 @@
+.converter-container {
+    background: url(../media/cycling.gif);
+    bottom:0;
+    background-position: top center;
+    position: relative;
+    z-index:1;
+   
+}
+.converter-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 40%;
+    width: 100%;
+    background-image: linear-gradient(to top, #ffffff 0%, #ace0f9 20%);
+    opacity: 1;
+    z-index: -1;
+}
+
+.fa-gauge-high{
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}

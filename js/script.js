@@ -1,5 +1,6 @@
 var dropList = document.getElementById("drop-list");
 var input = document.getElementById("floatingInput");
+var output = document.getElementById("output");
 
 var speedList = [
     "Kilometer per hour",
@@ -20,10 +21,12 @@ for(var i = 0; i < speedList.length; i++) {
     el.value = opt;
     dropList.appendChild(el);
 }
+output.style.visibility = "hidden";
 input.addEventListener("keyup", result);
 dropList.addEventListener("change", result);
 
 function result(){
+    output.style.visibility = "visible";
     if (dropList.value ===  "Kilometer per hour"){
         let kph = input.value;
         let mps = kph / 3.6;

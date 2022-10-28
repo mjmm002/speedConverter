@@ -15,56 +15,71 @@
   <body>
     <div class="container">
         <form action="#">
-            <div class="justify-content-center d-flex align-items-center">
-              <div class="d-flex flex-column col-md-10 col-lg-5 col-12 justify-content-start align-content-center align-items-center converter-container" style="height: 100vh">
-                <span class="h1 display-4 text-center my-3"><i class="fa-solid fa-gauge-high fa-beat" style="--fa-beat-scale: 1.05; --fa-animation-duration: .15s;"></i> Speed Converter</span>
-                <div class="form-floating mb-4 col-lg-10 col-11">
-                  <input type="number" class="form-control rounded-0" id="floatingInput" placeholder="Kilometer per hour" min= "0.01" step= "0.01">
-                  <label for="floatingInput">Enter Kilometer per Hour</label>
+          <div class="justify-content-center d-flex align-items-center">
+            <div class="row col-lg-6 justify-content-center align-content-start converter-container" style="height: 100vh;">
+              <span class="h1 display-4 text-center my-3 col-12"><i class="fa-solid fa-gauge-high fa-beat" style="--fa-beat-scale: 1.05; --fa-animation-duration: .15s;"></i> Speed Converter</span>
+              <div class="row col-lg-11 col-12 mb-3">
+                <div class="form-floating col-6">
+                  <input type="number" class="form-control rounded-0 col-md-5" id="floatingInput" placeholder="Kilometer per hour" min= "0.01" step= "0.01">
+                  <label for="floatingInput">Enter Speed Unit</label>
                 </div>
-
-                <!--Meters per second-->
-                <div class="card rounded-0 text-bg-primary mb-1 col-lg-10 col-11">
-                    <div class="card-block px-2">
-                        <h5>Meters per second</h5>
-                        <div id="mps"></div>
-                    </div>
-                </div>
-                
-                <!--Feet per second-->
-                <div class="card rounded-0 text-bg-danger mb-1 col-lg-10 col-11">
-                    <div class="card-block px-2">
-                        <h5>Feet per second</h5>
-                        <div id="fps"></div>
-                    </div>
-                </div>
-                
-                <!--Miles per hour-->
-                <div class="card mb-1 rounded-0 text-bg-success col-lg-10 col-11">
-                    <div class="card-block px-2">
-                        <h5>Miles per hour</h5>
-                        <div id="mph"></div>
-                    </div>
-                </div>
-                
-                <!--Knots-->
-                <div class="card rounded-0 text-bg-warning mb-1 col-lg-10 col-11">
-                    <div class="card-block px-2">
-                        <h5>Knots</h5>
-                        <div id="knt"></div>
-                    </div>
-                </div>
-                
-                <!--Mach-->
-                <div class="card rounded-0 text-bg-info mb-1 col-lg-10 col-11">
-                    <div class="card-block px-2">
-                        <h5>Mach(Speed of Light)</h5>
-                        <div id="mac"></div>
-                    </div>
+                <div class="col-6">
+                  <select class="form-select col" id="drop-list" aria-label="Default select example">
+                  </select>
                 </div>
               </div>
+                
+
+              <!--Kilometers per Hour-->
+              <div class="card rounded-0 text-bg-primary mb-1 col-lg-10 col-11" id="card-kph">
+                  <div class="card-block px-2">
+                      <h5>Kilometer per second</h5>
+                      <div id="kph"></div>
+                  </div>
+              </div>
+
+              <!--Meters per second-->
+              <div class="card rounded-0 text-bg-secondary mb-1 col-lg-10 col-11" id="card-mps">
+                  <div class="card-block px-2">
+                      <h5>Meter per second</h5>
+                      <div id="mps"></div>
+                  </div>
+              </div>
+              
+              <!--Feet per second-->
+              <div class="card rounded-0 text-bg-danger mb-1 col-lg-10 col-11" id="card-fps">
+                  <div class="card-block px-2">
+                      <h5>Feet per second</h5>
+                      <div id="fps"></div>
+                  </div>
+              </div>
+              
+              <!--Miles per hour-->
+              <div class="card mb-1 rounded-0 text-bg-success col-lg-10 col-11" id="card-mph">
+                  <div class="card-block px-2">
+                      <h5>Miles per hour</h5>
+                      <div id="mph"></div>
+                  </div>
+              </div>
+              
+              <!--Knots-->
+              <div class="card rounded-0 text-bg-warning mb-1 col-lg-10 col-11" id="card-knt">
+                  <div class="card-block px-2">
+                      <h5>Knots</h5>
+                      <div id="knt"></div>
+                  </div>
+              </div>
+              
+              <!--Mach-->
+              <div class="card rounded-0 text-bg-info mb-1 col-lg-10 col-11" id="card-mac">
+                  <div class="card-block px-2">
+                      <h5>Mach(Speed of Light)</h5>
+                      <div id="mac"></div>
+                  </div>
+              </div>
             </div>
-          </form>
+          </div>
+        </form>
     </div>
     <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

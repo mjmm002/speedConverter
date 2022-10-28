@@ -1,3 +1,9 @@
+h5{
+    margin: 0;
+}
+label{
+    font-size: smaller;
+}
 .converter-container {
     background: url(../media/cycling.gif);
     bottom:0;
@@ -16,6 +22,21 @@
     background-image: linear-gradient(to top, #ffffff 0%, #ace0f9 20%);
     opacity: 1;
     z-index: -1;
+}
+.form-floating>.form-control,
+.form-floating>.form-control-plaintext {
+  padding: 0rem 0.75rem;
+}
+
+.form-floating>.form-control,
+.form-floating>.form-control-plaintext,
+.form-floating>.form-select {
+  height: calc(2.3rem + 2px);
+  line-height: 1;
+}
+
+.form-floating>label {
+  padding: 0.5rem 0.75rem;
 }
 
 .fa-gauge-high{

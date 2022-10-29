@@ -1,6 +1,7 @@
 var dropList = document.getElementById("drop-list");
 var input = document.getElementById("floatingInput");
 var output = document.getElementById("output");
+var label = document.getElementById("label")
 
 var speedList = [
     "Kilometer per hour",
@@ -44,7 +45,8 @@ function result(){
         document.getElementById("card-mph").style.display = "block";    
         document.getElementById("card-knt").style.display = "block";    
         document.getElementById("card-fps").style.display = "block";    
-        document.getElementById("card-mac").style.display = "block";    
+        document.getElementById("card-mac").style.display = "block"; 
+        label.innerHTML = "Convert Km/hr"   
     } else if (dropList.value === "Meter per second"){
         let mps = input.value;
         let kph = mps * 3.6;
@@ -63,6 +65,7 @@ function result(){
         document.getElementById("card-knt").style.display = "block";    
         document.getElementById("card-fps").style.display = "block";    
         document.getElementById("card-mac").style.display = "block";
+        label.innerHTML = "Convert Meter/sec"  
     } else if (dropList.value === "Miles per hour"){
         let mph = input.value;
         let mps = mph * 0.44704;
@@ -80,7 +83,8 @@ function result(){
         document.getElementById("card-kph").style.display = "block";    
         document.getElementById("card-knt").style.display = "block";    
         document.getElementById("card-fps").style.display = "block";    
-        document.getElementById("card-mac").style.display = "block";  
+        document.getElementById("card-mac").style.display = "block";
+        label.innerHTML = "Convert Miles/hr"    
     } else if (dropList.value === "Feet per second"){
         let fps = input.value;
         let mps = fps / 3.281;
@@ -99,6 +103,7 @@ function result(){
         document.getElementById("card-knt").style.display = "block";    
         document.getElementById("card-kph").style.display = "block";    
         document.getElementById("card-mac").style.display = "block";  
+        label.innerHTML = "Convert ft/sec"  
     } else if (dropList.value === "Knot"){
         let knt = input.value;
         let mps = knt / 1.944;
@@ -116,7 +121,8 @@ function result(){
         document.getElementById("card-mph").style.display = "block";    
         document.getElementById("card-kph").style.display = "block";    
         document.getElementById("card-fps").style.display = "block";    
-        document.getElementById("card-mac").style.display = "block"; 
+        document.getElementById("card-mac").style.display = "block";
+        label.innerHTML = "Convert Knots"   
     } else if (dropList.value === "Mach(Speed of sound)"){
         let mac = input.value;
         let mps = mac * 343;
@@ -134,7 +140,8 @@ function result(){
         document.getElementById("card-mph").style.display = "block";    
         document.getElementById("card-knt").style.display = "block";    
         document.getElementById("card-fps").style.display = "block";    
-        document.getElementById("card-kph").style.display = "block";  
+        document.getElementById("card-kph").style.display = "block"; 
+        label.innerHTML = "Convert Mach(Speed of Sound)"   
     }
     
 }

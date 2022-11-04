@@ -17,8 +17,13 @@
         <form action="#">
           <div class="justify-content-center d-flex align-items-center">
             <div class="row col-lg-6 justify-content-center align-content-start converter-container" style="height: 100vh;">
-              <span class="h1 display-4 text-center my-3 col-12"><i class="fa-solid fa-gauge-high fa-beat" style="--fa-beat-scale: 1.05; --fa-animation-duration: .15s;"></i> Speed Converter</span>
+              <span id="title" class="h1 display-4 text-center my-3 col-12 title"><i class="fa-solid fa-gauge-high fa-beat" style="--fa-beat-scale: 1.05; --fa-animation-duration: .15s;"></i> <span>Speed Converter</span></span>
               <div class="row col-lg-11 col-12 mb-3">
+                <div class="col-12">
+                  <select class="form-select col mb-2" id="converter-list" aria-label="Default select example" onchange="converter(this.id, 'drop-list')">
+                    <option selected disabled>Unit Converter</option>
+                  </select>
+                </div>
                 <div class="form-floating col-6">
                   <input type="number" class="form-control rounded-0 col-md-5" id="floatingInput" placeholder="Kilometer per hour" min= "0.01" step= "0.01">
                   <label id="label" for="floatingInput">Convert Km/hr</label>
@@ -30,51 +35,52 @@
               </div>
                 
               <div class="row col-12 justify-content-center" id="output">
+              
                 <!--Kilometers per Hour-->
-                <div class="card rounded-0 text-bg-primary mb-1 col-lg-10 col-11" id="card-kph">
+                <div class="card rounded-0 text-bg-primary mb-1 col-lg-10 col-11" id="card1">
                     <div class="card-block px-2">
-                        <h5>Kilometer per second</h5>
-                        <div id="kph"></div>
+                        <h5 class="labels">Kilometer per second</h5>
+                        <div id="output1"></div>
                     </div>
                 </div>
 
                 <!--Meters per second-->
-                <div class="card rounded-0 text-bg-secondary mb-1 col-lg-10 col-11" id="card-mps">
+                <div class="card rounded-0 text-bg-secondary mb-1 col-lg-10 col-11" id="card2">
                     <div class="card-block px-2">
-                        <h5>Meter per second</h5>
-                        <div id="mps"></div>
+                        <h5 class="labels">Meter per second</h5>
+                        <div id="output2"></div>
                     </div>
                 </div>
                 
                 <!--Feet per second-->
-                <div class="card rounded-0 text-bg-danger mb-1 col-lg-10 col-11" id="card-fps">
+                <div class="card rounded-0 text-bg-danger mb-1 col-lg-10 col-11" id="card3">
                     <div class="card-block px-2">
-                        <h5>Feet per second</h5>
-                        <div id="fps"></div>
+                        <h5 class="labels">Feet per second</h5>
+                        <div id="output3"></div>
                     </div>
                 </div>
                 
                 <!--Miles per hour-->
-                <div class="card mb-1 rounded-0 text-bg-success col-lg-10 col-11" id="card-mph">
+                <div class="card mb-1 rounded-0 text-bg-success col-lg-10 col-11" id="card4">
                     <div class="card-block px-2">
-                        <h5>Miles per hour</h5>
-                        <div id="mph"></div>
+                        <h5 class="labels">Miles per hour</h5>
+                        <div id="output4"></div>
                     </div>
                 </div>
                 
                 <!--Knots-->
-                <div class="card rounded-0 text-bg-warning mb-1 col-lg-10 col-11" id="card-knt">
+                <div class="card rounded-0 text-bg-warning mb-1 col-lg-10 col-11" id="card5">
                     <div class="card-block px-2">
-                        <h5>Knots</h5>
-                        <div id="knt"></div>
+                        <h5 class="labels">Knots</h5>
+                        <div id="output5"></div>
                     </div>
                 </div>
                 
                 <!--Mach-->
-                <div class="card rounded-0 text-bg-info mb-1 col-lg-10 col-11" id="card-mac">
+                <div class="card rounded-0 text-bg-info mb-1 col-lg-10 col-11" id="card6">
                     <div class="card-block px-2">
-                        <h5>Mach(Speed of Light)</h5>
-                        <div id="mac"></div>
+                        <h5 class="labels">Mach(Speed of Light)</h5>
+                        <div id="output6"></div>
                     </div>
                 </div>
               </div>

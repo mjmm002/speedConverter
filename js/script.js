@@ -13,6 +13,7 @@ var output6 = document.querySelector("#output6")
 var title = document.querySelector(".title span")
 var icon = document.querySelector('.title i')
 var bg = document.querySelector(".converter-container");
+var number = document.getElementById('floatingInput');
 
 
 
@@ -310,12 +311,14 @@ function result(){
 
 
 
-var number = document.getElementById('floatingInput');
+
 
 // Listen for input event on numInput.
 number.onkeydown = function(e) {
-    if (e.keyCode === 189 || e.keyCode === 63 || e.keyCode === 169 || e.keyCode === 109) {
-        e.preventDefault();
+    if (convertList.value === "Speed" || convertList.value === "Weight and Mass"){
+        if (e.keyCode === 189 || e.keyCode === 63 || e.keyCode === 169 || e.keyCode === 109) {
+            e.preventDefault();
+        }
     }
 }
 

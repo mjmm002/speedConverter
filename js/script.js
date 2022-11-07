@@ -260,10 +260,10 @@ function result(){
             label.innerHTML = "Convert Pounds(lb)"   
         }
         else if (dropList.value === "Ounce(oz)"){
-            let g = val * 453.592;
-            let mg = val * 453592;
-            let kg = val * 0.453592;
-            let ton = val * 0.000453592;
+            let g = val * 28.3495;
+            let mg = val * 28349.5;
+            let kg = val * 0.0283495;
+            let ton = val * 2.835e-5;
             let lb = val * 0.0625;
             output1.innerHTML = g.toFixed(2);
             output2.innerHTML = mg.toFixed(2);

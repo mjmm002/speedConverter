@@ -276,7 +276,7 @@ function result(){
     } else if (convertList.value === "Temperature"){
         if (dropList.value === "Celcius"){
             let far = (val * 9/5) + 32;
-            let kel = val + 273.15;
+            let kel = parseInt(val) + 273.15;
             output2.innerHTML = far.toFixed(2);
             output3.innerHTML = kel;
             card1.style.display = "none"
@@ -286,7 +286,7 @@ function result(){
             label.innerHTML = "Convert Celcius(°C)"   
         } else if (dropList.value === "Fahrenheit"){
             let cel = (val-32) * 5/9;
-            let kel = (val-32)* 5/9 + 273.15;
+            let kel = parseFloat((val-32)* 5/9) + parseInt(273.15);
             output1.innerHTML = cel.toFixed(2);
             output3.innerHTML = kel.toFixed(2);
             card2.style.display = "none"
@@ -296,7 +296,7 @@ function result(){
             label.innerHTML = "Convert Fahrenheit(°F)"
         } else if (dropList.value === "Kelvin"){
             let cel = val-273.15;
-            let far = (val-273.15) * 9/5 + 32
+            let far = parseFloat((val-273.15) * 9/5) + parseFloat(32);
             output1.innerHTML = cel.toFixed(2);
             output2.innerHTML = far.toFixed(2);
             card3.style.display = "none"

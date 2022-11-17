@@ -92,12 +92,10 @@ function converter(list, unit){
         console.log(option)
         
     }
-    labels[0].innerHTML = optionList[0]
-    labels[1].innerHTML = optionList[1]
-    labels[2].innerHTML = optionList[2]
-    labels[3].innerHTML = optionList[3]
-    labels[4].innerHTML = optionList[4]
-    labels[5].innerHTML = optionList[5]
+
+    for (let i = 0; i< labels.length; i++){
+        labels[i].innerHTML = optionList[i]
+    }
 }
 
 function result(){
@@ -192,13 +190,13 @@ function result(){
     }
     else if (convertList.value === "Weight and Mass"){
         if (dropList.value === "Gram(g)"){
-            let kg = val * 0.001;
             let mg = val * 1000;
+            let kg = val * 0.001;
             let ton = val * 1e-6;
             let lb = val * 0.00220462;
             let oz = val * 0.035274;
-            output2.innerHTML = kg.toFixed(2);
-            output3.innerHTML = mg.toFixed(2);
+            output2.innerHTML = mg.toFixed(2);
+            output3.innerHTML = kg.toFixed(2);
             output4.innerHTML = ton;
             output5.innerHTML = lb.toFixed(2);
             output6.innerHTML = oz.toFixed(2);
